@@ -1,0 +1,55 @@
+body{
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+header{
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	column-gap: 16px;
+	position: ;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.header img{
+	width: 120px;
+}
+
+.botones{
+	display: flex;
+	column-gap: 60px;
+	margin-right: 40px;
+	align-items: center;
+}
+
+.box1 a{
+	color: black;
+	padding-bottom: 10px;
+	text-decoration: none;
+	text-align: center;
+
+}
+
+.box1 a:hover{
+	border-bottom: solid;
+	color: grey;
+}
+
+.botones button{
+	padding: 12px;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 7px;
+	
+}
