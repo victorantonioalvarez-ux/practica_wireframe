@@ -26,6 +26,10 @@ button:hover{
 
 }
 
+.desplegable{
+	display: none;
+}
+
 /* Variables */
 
 
@@ -38,8 +42,6 @@ button:hover{
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	column-gap: 16px;
-	position: ;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -77,7 +79,6 @@ button:hover{
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	max-width: 100%;
     height: auto;
 	width: 100%;
 	display: flex;
@@ -169,7 +170,6 @@ tr:nth-child(2n){
 .campana{
 	display: flex;
 	flex-direction: row;
-	justify-content: start;
 	align-items: center;
 	margin-bottom: 15px;
 }
@@ -177,11 +177,14 @@ tr:nth-child(2n){
 .campana input{
 	height: 21px;
 	width: 250px;
+	margin: 0px;
 	margin-right: 15px;
+	border: 1px solid;
+	padding:3px;
 }
 .campana button{
-	height: 27px;
-	padding: 0;
+	padding-top: 9px;
+	padding-bottom: 7px;
 	border-radius: 3px;
 	font-size: 10px;
 	width: 100px;
@@ -209,7 +212,9 @@ tr:nth-child(2n){
 }
 
 .lateral img{
-	width: 275px;
+	width: 100%;
+	height: auto;
+	max-width: 400px;
 }
 
 .lateral h3{
@@ -226,10 +231,14 @@ tr:nth-child(2n){
 	border: 1px solid #B3B2AF;
 }
 
+.barra-media{
+	display: none;
+}
+
 /* Cierre de Main */
 
 
-/* Tercera Section */
+/* Tercera Section: FAQ */
 
 .faq{
 	display: flex;
@@ -238,6 +247,8 @@ tr:nth-child(2n){
 	gap: 15px;
 	border-top: 1px solid #B3B2AF;
 	margin-bottom: 50px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .faq h4{
@@ -257,7 +268,8 @@ tr:nth-child(2n){
 }
 
 .box2{
-	width: 600px;
+	width: 100%;
+	max-width: 800px;
 	border: 1px solid #B3B2AF;
 	display: flex;
 	flex-direction: row;
@@ -270,7 +282,8 @@ tr:nth-child(2n){
 }
 
 .box3{
-	width: 600px;
+	width: 100%;
+	max-width: 800px;
 	border: 1px solid #B3B2AF;
 }
 
@@ -338,10 +351,10 @@ tr:nth-child(2n){
 
 /* Footer */
 
-.piedepagina{
+.pie-de-pagina{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 100px 100px;
+	grid-template-rows: auto auto;
 
 }
 
@@ -383,4 +396,100 @@ tr:nth-child(2n){
 
 /* Media Queries */
 
-A
+@Media (max-width: 1171px){
+	/* Header */
+
+	.cabecera nav{
+		display: none;
+	}
+
+	.cabecera{
+		justify-content: space-between;
+	}
+
+	.desplegable{
+		display: flex;
+		gap: 15px;
+	}
+
+	.desplegable button{
+		height: 27px;
+		padding: 0;
+		border-radius: 3px;
+		font-size: 10px;
+		width: 100px;
+	}
+
+	.desplegable img{
+		height: 27px;
+	}
+
+
+	/* Apertura Main */
+	main{
+		flex-direction: column;
+	}
+
+	/* Segunda Section: Calendario */
+
+	.calendario{
+		margin-left: 0px;
+	}
+	.calendario table{
+		width: 100%;
+	}
+	.campana input{
+		margin-left: 10px;
+		margin-right: -7px;
+	}
+	.campana button{
+		margin-left: 0px;
+	}
+
+	tr:nth-child(2n){
+	background-color: white;
+	}
+
+	/* Aside */
+
+	.lateral{
+		align-items: center;
+		gap: 30px;
+	}
+
+	.box-media img{
+		width: 100%;
+		height: auto;
+		max-width: 800px;
+	}
+	.box-media div{
+		width: 100%;
+		height: auto;
+		max-width: 800px;
+	}
+
+	.desaparece{
+		display: none;
+	}
+
+	.barra-media{
+		display: flex;
+		background-color: #5E5E5E;
+		width: 100%;
+		height: 25px;
+	}
+
+	.barra-media div{
+		background-color: #D4D4D4;
+		height: 15px;
+		width: 200px;
+		margin: 4px;
+		margin-left: 15px;
+	}
+
+	/* Cierre Main */
+
+	/* Footer */
+
+
+}
